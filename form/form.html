@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js"></script>
+</head>
+<body>
+    
+<form action="form.php" class="postcard" method="POST">
+    <h2 class="title">Оформление заказа</h2>
+    <div class="container-product">
+        
+            <div class="name-product">
+                <h3 class="name-title">Товар:</h3>
+                <label for="select"></label>
+                <select id="id_select id_select_js" class="select-title" name="select" >
+                    <option class="sandvich foods" id="1" price="150">Сэндвич</option>
+                    <option class="curasan foods" id="2" price="100">Курасан</option>
+                    <option class="potato free foods" id="3" price="90">Картошка Фри</option>
+                </select>
+            </div>
+            
+            <div class="container-img-product">
+                <div class="img-product">
+                    <img class="form-img" id="i1" src="../img/dish/d1.jpg" alt="">
+                    <img class="form-img" id="i2" src="../img/dish/d2.jpg" alt="">
+                    <img class="form-img" id="i3" src="../img/dish/d3.jpg" alt="">
+                </div>
+        </div>
+    </div>
+    <div class="form-row first-name">
+    <label for="name">Ваше имя</label><input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-row">
+        <label for="phone">Ваш номер телефона</label><input type="text" id="number" name="phone" onkeypress="return (event.charCode >= 48 && event.charCode <= 57 && /^\d{0,10}$/.test(this.value)); required">
+        </div>
+    <div class="form-row">
+    <label for="adres">Ваш адрес</label><input type="text" id="adres" name="adres" required>
+    </div>
+    <div class="form-row">
+    <label for="message">Ваше сообщение</label><textarea rows="5" id="message" name="message" required></textarea>
+    </div>
+    <label for="price"></label><div class="price-product">Итого: ₽ <span class="price-value" id="price" name="price" value="100">100</span><input type="hidden" name="price" value="99" class="input-price"></div>
+    <div class="form-row">
+    <input type="submit" name="order" value="Заказать" class="btn_submit">
+    </div>
+    </form>
+</body>
+</html>
